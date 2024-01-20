@@ -71,8 +71,7 @@ st.markdown("""
 """, unsafe_allow_html=True
 )
 
-# 로그인 권한 확인
-## 권한 없을 시, 초기 로그인
+# Check login authorization
 if "authenticator" not in st.session_state or st.session_state['logout']:
     names = ["admin", "user"]
     usernames = ["admin", "user"]
@@ -206,11 +205,7 @@ if "authenticator" in st.session_state and st.session_state["authentication_stat
                         st.image(resized_img)
                     with col2:
                         st.image(output_img)
-                        
 
-                    # st.write(f'{additional_info}')
-                    # response += additional_info
-                                
                 st.session_state["messages"].append({"role": "assistant", 
                                                     "content": response + additional_info, 
                                                     "OriginalImage" : resized_img,

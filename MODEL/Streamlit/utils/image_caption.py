@@ -32,7 +32,6 @@ def get_image_caption(target_image, device):
     # Create an image from the NumPy array
     image = Image.fromarray(image_array)
     image = image.convert('RGB')
-    image.save(r'C:/Users/MZC01-HYUNHOPART/Desktop/PROJECT/PAPER/RESULT/resized_image.png', 'png')
     model_name = "Salesforce/blip-image-captioning-large"
 
     processor = BlipProcessor.from_pretrained(model_name)
