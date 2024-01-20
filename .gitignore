@@ -1,0 +1,11 @@
+# FILE PATH
+/HAM10000/images
+/HAM10000/masks
+/AUTOSUMMARY
+
+**/__pycache__/
+**/fine_tune_model
+**/pkl
+**/temp
+**.env
+/RESULT/
