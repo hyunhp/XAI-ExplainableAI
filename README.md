@@ -62,5 +62,9 @@ pip install -r requirements.txt
 
 ## Author
 
-[Hyunho Park]
+**Hyunho Park**
+
+## Updated
+
+2024-01-20
 
