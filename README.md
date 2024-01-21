@@ -59,6 +59,7 @@ pip install -r requirements.txt
 
 - This code is designed for educational and research purposes.
 - Ensure proper authentication and security measures before deploying in production.
+- If you want to know how to use it, please refer the demo video in DEMO folder. 
 
 ## Author
 
@@ -66,5 +67,5 @@ pip install -r requirements.txt
 
 ## Updated At
 
-2024-01-20
+2024-01-21
 
