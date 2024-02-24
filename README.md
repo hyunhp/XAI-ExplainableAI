@@ -4,6 +4,11 @@
 
 This repository contains the code for an AI chatbot designed for skin disease diagnosis. The chatbot utilizes a combination of computer vision and natural language processing to assist users in diagnosing skin conditions based on uploaded images and user queries.
 
+## DEMO
+<p align="center">
+  <img src="https://github.com/hyunhp/XAI-ExplainableAI/assets/105839613/d1ec08c0-9c86-4c15-bc6b-4877cb109b6c">
+</p>
+
 ## Features
 
 - Image-based Diagnosis: Users can upload images of skin conditions for diagnosis.
