@@ -6,7 +6,7 @@ This repository contains the code for an AI chatbot designed for skin disease di
 
 ## DEMO
 <p align="center">
-  <img src="https://github.com/hyunhp/XAI-ExplainableAI/assets/105839613/d1ec08c0-9c86-4c15-bc6b-4877cb109b6c">
+  <img src="https://github.com/hyunhp/XAI-ExplainableAI/assets/105839613/d1ec08c0-9c86-4c15-bc6b-4877cb109b6c" width = "600">
 </p>
 
 ## Features
