@@ -1,11 +1,21 @@
-# FILE PATH
-/HAM10000/images
-/HAM10000/masks
-/AUTOSUMMARY
+# PATH
+/EDA/
+/HAM10000/
+/RESULT/
+/MODEL/EVALUATION/
+/MODEL/Automated_Ensemble/
+/REFERENCE/
 
+# SUB-PATH
 **/__pycache__/
 **/fine_tune_model
 **/pkl
+**/notebook
+**/old
 **/temp
+
+# FILE
 **.env
-/RESULT/
+**.ipynb
+prompt_template.json
+env_cam.json

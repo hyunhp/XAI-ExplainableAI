@@ -1,7 +1,6 @@
 import torch
 import numpy as np
 import random
-import argparse
 
 def set_seed(seed:int=42):
     '''
@@ -26,5 +25,3 @@ def set_seed(seed:int=42):
 
     # Set the random seed for Python's built-in random module
     random.seed(seed)
-    
-    print(f'RANDOM STATE {seed} IS STAIBLIZED....')

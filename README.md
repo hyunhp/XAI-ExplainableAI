@@ -4,6 +4,8 @@
 
 This repository contains the code for an AI chatbot designed for skin disease diagnosis. The chatbot utilizes a combination of computer vision and natural language processing to assist users in diagnosing skin conditions based on uploaded images and user queries.
 
+## Demo
+
 ## Features
 
 - Image-based Diagnosis: Users can upload images of skin conditions for diagnosis.
@@ -12,11 +14,18 @@ This repository contains the code for an AI chatbot designed for skin disease di
 
 ## Prerequisites
 
-Install the required Python packages using:
+1. Install the required Python packages using pip
 
 ```bash
-pip install -r requirements.txt
+pip install -r pip_requirements.txt
 ```
+
+2. Install the required Python pacakes using conda
+
+```bash
+conda create --name <env> --file conda_requirements.txt
+```
+
 
 ## Getting Started
 
@@ -29,19 +38,20 @@ pip install -r requirements.txt
 
 2. **Set up your environment variables:**
 
-    Create a `.env` file in the root directory and set the following variables:
+    Create a `.env` file in the root directory and set the following variables.
+    Pretrained model is saved under the root directory, "pretrained".
 
     ```bash
-    local_dir=/path/to/label_data/
-    pretrained_model_path=/path/to/pretrained/model.pth
+    pretrained_model_path=/path/to/pretrained/resnet18_pretrained.pth
     openai_api_key=your_openai_api_key
-    default_prompt=your_default_prompt
+    DEFAULT_PROMPT=your_default_prompt
+    GPT4_PROMPT=your_vlm_prompt
     ```
 
 3. **Run the Streamlit app:**
 
     ```bash
-    streamlit run main_app.py
+    streamlit run streamlit.py
     ```
 
 4. **Access the chatbot in your browser:**
@@ -66,5 +76,5 @@ pip install -r requirements.txt
 
 ## Updated At
 
-2024-01-20
+2024-05-29
 
