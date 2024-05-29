@@ -20,7 +20,7 @@ This repository contains the code for an AI chatbot designed for skin disease di
 pip install -r pip_requirements.txt
 ```
 
-2. Install the required Python pacakes using conda
+2. Or install the required Python pacakes using conda
 
 ```bash
 conda create --name <env> --file conda_requirements.txt
