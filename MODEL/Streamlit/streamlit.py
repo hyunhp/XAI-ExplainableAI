@@ -1,9 +1,3 @@
-'''
-TO DO: MUTLI MODAL RESERACH
-to do: library cleansing
-UPDATED AT : 2024-05-28
-CREATED AT : 2024-01-17
-'''
 from PIL import Image 
 import os
 import pickle
