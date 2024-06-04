@@ -76,5 +76,4 @@ conda create --name <env> --file conda_requirements.txt
 
 ## Updated At
 
-2024-05-29
-
+2024-06-04
