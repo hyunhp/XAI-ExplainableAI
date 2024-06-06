@@ -17,6 +17,6 @@
 # FILE
 **.env
 **.ipynb
-SHORT_FORM.*
+SHORT_FORM.mp4
 prompt_template.json
 env_cam.json
