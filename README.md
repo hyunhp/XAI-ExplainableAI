@@ -10,7 +10,7 @@ This repository contains the code for an AI chatbot designed for skin disease di
 
 - Image-based Diagnosis: Users can upload images of skin conditions for diagnosis.
 - Natural Language Interaction: Users can ask questions and receive responses from the chatbot.
-- Model Integration: The chatbot integrates pre-trained models for image classification and language generation.
+- Model Integration: The chatbot integrates pre-trained models for image classification and LLM model (ChatGPT) to generate diagnose.
 
 ## Prerequisites
 
@@ -76,4 +76,4 @@ conda create --name <env> --file conda_requirements.txt
 
 ## Updated At
 
-2024-06-04
+2024-06-06

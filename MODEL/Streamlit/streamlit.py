@@ -160,9 +160,9 @@ if "authenticator" in st.session_state and st.session_state["authentication_stat
                                                                                                                  transform = transform, 
                                                                                                                  label_mapping = label_mapping,
                                                                                                                  )
-                            
+                    messageCoordPoint = user_message + f"\nPaying attention to the region around coordinates {max_activation_coord}."
                     input_variables = ['inference_label', 'max_activation_coord', 'question']
-                    input_data = [predicted_label, max_activation_coord, user_message]
+                    input_data = [predicted_label, max_activation_coord, messageCoordPoint]
                     input_dict = {k:v for k, v in zip(input_variables, input_data)}
                     input_text = gpt4_prompt.format(**input_dict)
                     
