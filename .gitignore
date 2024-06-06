@@ -17,5 +17,6 @@
 # FILE
 **.env
 **.ipynb
+SHORT_FORM.*
 prompt_template.json
 env_cam.json

@@ -5,6 +5,7 @@
 This repository contains the code for an AI chatbot designed for skin disease diagnosis. The chatbot utilizes a combination of computer vision and natural language processing to assist users in diagnosing skin conditions based on uploaded images and user queries.
 
 ## Demo
+![DEMO](DEMO/SHORT_FORM.gif)
 
 ## Features
 
