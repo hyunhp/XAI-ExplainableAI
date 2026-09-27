@@ -59,7 +59,7 @@ if "authenticator" not in st.session_state or st.session_state['logout']:
         user_dict = {"name": name, "password": pwd}
         login_credentials["usernames"].update({uname: user_dict})
 
-    authenticator = stauth.Authenticate(login_credentials,'some_cookie_name', 'some_signature_key', cookie_expiry_days=30)
+    authenticator = stauth.Authenticate(login_credentials, 'skin_xai_auth', os.environ.get('AUTH_COOKIE_KEY', os.urandom(16).hex()), cookie_expiry_days=1)
     name, authentication_status, username = authenticator.login("Lesion Skin Dieases Diagnose Chatbot", "main")
 
     if authentication_status == False:

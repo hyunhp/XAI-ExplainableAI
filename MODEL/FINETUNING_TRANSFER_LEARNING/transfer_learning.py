@@ -14,7 +14,7 @@ def transfer_learning(
     apply_augment, augment, randomness
 ):
     model_class = getattr(models, model_architecture)
-    model = model_class(weights=True)
+    model = model_class(weights='DEFAULT')  # ImageNet weights
     model.fc = nn.Linear(model.fc.in_features, 7)
 
     # Define loss function and optimizer

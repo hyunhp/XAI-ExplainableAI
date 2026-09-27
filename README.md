@@ -1,6 +1,6 @@
 # Explainable Skin Lesion Diagnosis with CAM-Guided Vision Language Models
 
-Research code for my M.S. thesis at Sogang University (Data Science and Artificial Intelligence, 2024):
+Research code for my M.S. thesis at Sogang University (Data Science and Artificial Intelligence):
 **"Enhancing Dermatological Diagnostics by Explainable AI and Vision Language Model"**
 ([thesis record](https://dcollection.sogang.ac.kr/dcollection/srch/srchDetail/000000078907))
 
@@ -99,6 +99,7 @@ Create a `.env` file:
 pretrained_model_path=pretrained/resnet18_pretrained.pth
 openai_api_key=YOUR_OPENAI_API_KEY
 GPT4_PROMPT=YOUR_PROMPT_TEMPLATE
+AUTH_COOKIE_KEY=ANY_RANDOM_STRING   # optional, keeps demo logins valid across restarts
 ```
 
 The demo uses a simple login. Generate the credential file once, then start the app:
@@ -122,5 +123,3 @@ PyTorch, torchvision, pytorch-grad-cam, OpenCV, OpenAI vision API, G-EVAL, Strea
 ## Author
 
 Hyunho Park · [LinkedIn](https://www.linkedin.com/in/hyun-ho-park/) · [GitHub](https://github.com/hyunhp)
-
-Original research: 2024. README revised: 2026-09.
