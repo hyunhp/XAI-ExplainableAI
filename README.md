@@ -123,6 +123,10 @@ python main_train.py --model resnet18 --epoch 100 --augment whole
 
 PyTorch, torchvision, pytorch-grad-cam, OpenCV, OpenAI vision API, G-EVAL, Streamlit
 
+## License
+
+Code is released under the [MIT License](LICENSE). The HAM10000 dataset is not included and is subject to its own license.
+
 ## Author
 
 Hyunho Park · [LinkedIn](https://www.linkedin.com/in/hyun-ho-park/) · [GitHub](https://github.com/hyunhp)
