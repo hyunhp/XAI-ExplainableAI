@@ -78,6 +78,7 @@ MODEL/
     ├── streamlit.py
     ├── pretrained/resnet18_pretrained.pth
     └── utils/                      # inference (Layer-CAM + VLM call), auth, cache
+requirements.txt                    # minimal dependencies
 DEMO/
 ├── SHORT_FORM.gif
 ├── [DEMO] Skin disease AI Chat bot.mkv
@@ -89,7 +90,8 @@ DEMO/
 ```bash
 git clone https://github.com/hyunhp/XAI-ExplainableAI.git
 cd XAI-ExplainableAI
-pip install -r pip_requirements.txt          # or: conda create --name <env> --file conda_requirements.txt
+pip install -r requirements.txt   # minimal set for the demo and training
+# full research environment: pip_requirements.txt or conda_requirements.txt
 cd MODEL/Streamlit
 ```
 
@@ -102,11 +104,12 @@ GPT4_PROMPT=YOUR_PROMPT_TEMPLATE
 AUTH_COOKIE_KEY=ANY_RANDOM_STRING   # optional, keeps demo logins valid across restarts
 ```
 
-The demo uses a simple login. Generate the credential file once, then start the app:
+The demo uses a simple login (users `admin`, `doctor`, `user`). Generate the credential file once, then start the app:
 
 ```bash
-python utils/authentication.py    # writes pkl/hashed_pw.pkl
-streamlit run streamlit.py        # open http://localhost:8501
+export DEMO_PASSWORD=choose-a-password   # optional, defaults to 1234
+python utils/authentication.py           # writes pkl/hashed_pw.pkl
+streamlit run streamlit.py               # open http://localhost:8501
 ```
 
 To retrain the classifier, place HAM10000 images and labels locally, set the path in `env_cam.json`, and run:

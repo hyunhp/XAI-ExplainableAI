@@ -1,0 +1,15 @@
+# Minimal dependencies for the demo app and classifier training.
+# The full research environment is kept in pip_requirements.txt / conda_requirements.txt.
+torch==2.0.1
+torchvision==0.15.2
+numpy<2
+grad-cam==1.5.0
+opencv-python==4.9.0.80
+Pillow>=10.0
+streamlit==1.28.2
+streamlit-authenticator==0.2.3
+python-dotenv
+requests
+pandas
+scikit-learn
+tqdm

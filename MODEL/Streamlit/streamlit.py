@@ -14,7 +14,7 @@ from utils.streamlit_cache import clear_cache
 # Set inference statement
 set_seed(seed=42)
 
-# Loda .env file
+# Load .env file
 dotenv_file = find_dotenv()
 load_dotenv(dotenv_file)
 
@@ -24,11 +24,11 @@ num_classes = 7
 label_mapping = {'bkl': 0, 'nv': 1, 'df': 2, 'mel': 3, 'vasc': 4, 'bcc': 5, 'akiec': 6}
 model, model_architecture = Set_pretrained_model(num_classes=num_classes, pretrained_model_path=pretrained_model_path)
 
-# Set torch enviroment
+# Set torch environment
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 transform = transforms.Compose([
     transforms.ToTensor()
-    , transforms.Resize((224, 224), antialias=True) # PRE TRAINED MODEL MEAND AND STANDARD DEVIATION
+    , transforms.Resize((224, 224), antialias=True) # HAM10000 mean and standard deviation used during training
     , transforms.Normalize(mean=[0.7635212557080773, 0.5461279508434921, 0.5705303582621197], 
                            std =[0.08962782189107416, 0.11830749629626626, 0.13295368820124384])
     ])
@@ -60,7 +60,7 @@ if "authenticator" not in st.session_state or st.session_state['logout']:
         login_credentials["usernames"].update({uname: user_dict})
 
     authenticator = stauth.Authenticate(login_credentials, 'skin_xai_auth', os.environ.get('AUTH_COOKIE_KEY', os.urandom(16).hex()), cookie_expiry_days=1)
-    name, authentication_status, username = authenticator.login("Lesion Skin Dieases Diagnose Chatbot", "main")
+    name, authentication_status, username = authenticator.login("Skin Lesion Diagnosis Chatbot", "main")
 
     if authentication_status == False:
         st.error("Username/password is incorrect")
@@ -105,7 +105,7 @@ if "authenticator" in st.session_state and st.session_state["authentication_stat
         with col2: 
             img_file = st.file_uploader('If you want to check dieases, please upload the image.', type=['png', 'jpg', 'jpeg'])  
 
-        st.write("Logout Buttom")
+        st.write("Logout")
         authenticator.logout('Logout', 'main')
 
     if img_file is not None:
@@ -115,8 +115,8 @@ if "authenticator" in st.session_state and st.session_state["authentication_stat
     if "messages" not in st.session_state:
         st.session_state["messages"] = [{"role": "assistant", 
                                         "content": 
-                                            f"Dear '{username}', Welcome Lesion Skin Dieases Diagnose Chatbot!!\n\n"
-                                            f"If you want to diagnose skin dieases, Please Upload Skin Dieases Image on the Sidebar!!",
+                                            f"Dear '{username}', welcome to the Skin Lesion Diagnosis Chatbot.\n\n"
+                                            f"Please upload a skin lesion image in the sidebar to start.",
                                         "OriginalImage" : None,
                                         "InferenceImage": None,
                                         }]
@@ -167,7 +167,7 @@ if "authenticator" in st.session_state and st.session_state["authentication_stat
                     input_text = gpt4_prompt.format(**input_dict)
                     
                     response = vlm_inference(input_text=input_text, base64_image=base64_image, headers=headers)
-                    response += f'\n\nModel "Mostly focused" on the "Red area", and "Leastly" on the "Blue area".'
+                    response += '\n\nIn the heatmap, red areas had the most influence on the prediction and blue areas the least.'
                     st.markdown(response)
                     
                     col1, col2 = st.columns(2)

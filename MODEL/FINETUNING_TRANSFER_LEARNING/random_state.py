@@ -9,10 +9,10 @@ def set_seed(seed:int=42):
     random_seed = 42  (Choose any integer value as the random seed)
         
         - argparse
-        1. RandomNumber : Random Numbe to set enviroment stable.
+        1. RandomNumber : Random number used to make runs reproducible.
         
         - output
-        1. Random seed staiblized
+        1. Random seed stabilized
     '''
     # Set the random seed for PyTorch on CPU and GPU
     torch.manual_seed(seed)

@@ -1,7 +1,6 @@
 # Standard library imports
 import base64
 import io
-import json
 import os
 import tempfile
 import warnings
@@ -9,7 +8,6 @@ from typing import Tuple
 
 # Third-party library imports for data handling
 import numpy as np
-import pandas as pd
 import requests
 from PIL import Image, ImageDraw, ImageFont
 
@@ -23,7 +21,6 @@ from pytorch_grad_cam.utils.image import show_cam_on_image
 
 # Suppress specific warnings from libraries
 warnings.filterwarnings('ignore', category=UserWarning, module='torchvision')
-warnings.filterwarnings('ignore', category=UserWarning, module='langchain')
 
 def encode_image(image_path):
     # Open the image file
